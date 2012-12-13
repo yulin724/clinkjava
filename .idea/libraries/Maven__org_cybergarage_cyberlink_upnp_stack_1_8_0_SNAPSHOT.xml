@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.cybergarage.cyberlink:upnp-stack:1.8.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/cybergarage/cyberlink/upnp-stack/1.8.0-SNAPSHOT/upnp-stack-1.8.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/cybergarage/cyberlink/upnp-stack/1.8.0-SNAPSHOT/upnp-stack-1.8.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/cybergarage/cyberlink/upnp-stack/1.8.0-SNAPSHOT/upnp-stack-1.8.0-SNAPSHOT-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/upnp-stack/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

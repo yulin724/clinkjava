@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/samples/air-conditioner/air-conditioner.iml" filepath="$PROJECT_DIR$/samples/air-conditioner/air-conditioner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/clock/clock.iml" filepath="$PROJECT_DIR$/samples/clock/clock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/control-point/control-point.iml" filepath="$PROJECT_DIR$/tools/control-point/control-point.iml" />
+      <module fileurl="file://$PROJECT_DIR$/std/cyber-media-garage.iml" filepath="$PROJECT_DIR$/std/cyber-media-garage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cyberlink.iml" filepath="$PROJECT_DIR$/cyberlink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/igd-tool/igd-tool.iml" filepath="$PROJECT_DIR$/tools/igd-tool/igd-tool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/light/light.iml" filepath="$PROJECT_DIR$/samples/light/light.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/remote-controller/remote-controller.iml" filepath="$PROJECT_DIR$/samples/remote-controller/remote-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/tv/tv.iml" filepath="$PROJECT_DIR$/samples/tv/tv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upnp-stack/upnp-stack.iml" filepath="$PROJECT_DIR$/upnp-stack/upnp-stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/washer/washer.iml" filepath="$PROJECT_DIR$/samples/washer/washer.iml" />
+    </modules>
+  </component>
+</project>
+
