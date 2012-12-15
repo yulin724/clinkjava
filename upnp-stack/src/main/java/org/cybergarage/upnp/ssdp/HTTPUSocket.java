@@ -36,6 +36,7 @@ public class HTTPUSocket
 	//	Member
 	////////////////////////////////////////////////
 
+    // http://book.51cto.com/art/200809/89224.htm
 	private DatagramSocket ssdpUniSock = null;
 	//private MulticastSocket ssdpUniSock = null;
 
@@ -104,6 +105,7 @@ public class HTTPUSocket
 		close();
 		
 		try {
+            System.out.println("open() ssdpUniSock DatagramSocket 1");
 			ssdpUniSock = new DatagramSocket();
 		}
 		catch (Exception e) {
@@ -119,6 +121,8 @@ public class HTTPUSocket
 		close();
 		
 		try {
+            System.out.println("open() ssdpUniSock DatagramSocket 2");
+
 			// Changed to bind the specified address and port for Android v1.6 (2009/10/07)
 			InetSocketAddress bindInetAddr = new InetSocketAddress(InetAddress.getByName(bindAddr), bindPort);
 			ssdpUniSock = new DatagramSocket(bindInetAddr);
@@ -153,6 +157,8 @@ public class HTTPUSocket
 		close();
 		
 		try {
+            System.out.println("open() ssdpUniSock DatagramSocket 3");
+
 			InetSocketAddress bindSock = new InetSocketAddress(bindPort);
 			ssdpUniSock = new DatagramSocket(null);
 			ssdpUniSock.setReuseAddress(true);

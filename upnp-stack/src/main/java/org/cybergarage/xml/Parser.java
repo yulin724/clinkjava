@@ -29,8 +29,9 @@ import java.net.URL;
 import org.cybergarage.http.HTTP;
 import org.cybergarage.http.HTTPRequest;
 import org.cybergarage.http.HTTPResponse;
+import org.cybergarage.util.Debug;
 
-public abstract class Parser 
+public abstract class Parser
 {
 	////////////////////////////////////////////////
 	//	Constructor
@@ -54,11 +55,11 @@ public abstract class Parser
 	{
 		String host = locationURL.getHost();
 		int port = locationURL.getPort();
-		// Thanks for Hao Hu 
+		// Thanks for Hao Hu
 		if (port == -1)
 			port = 80;
 		String uri = locationURL.getPath();
-		
+
 		try {
 	 		HttpURLConnection urlCon = (HttpURLConnection)locationURL.openConnection();
 			urlCon.setRequestMethod("GET");
@@ -69,12 +70,12 @@ public abstract class Parser
 			InputStream urlIn = urlCon.getInputStream();
 
 			Node rootElem = parse(urlIn);
-			
+
 			urlIn.close();
 			urlCon.disconnect();
 
 			return rootElem;
-			
+
 		} catch (Exception e) {
 			//throw new ParserException(e);
 		}
@@ -100,9 +101,10 @@ public abstract class Parser
 		try {
 			InputStream fileIn = new FileInputStream(descriptionFile);
 			Node root = parse(fileIn);
+            root.setAttribute("xmlns", "urn:schemas-upnp-org:device-1-0");
 			fileIn.close();
 			return root;
-			
+
 		} catch (Exception e) {
 			throw new ParserException(e);
 		}
@@ -111,11 +113,13 @@ public abstract class Parser
 	////////////////////////////////////////////////
 	//	parse (Memory)
 	////////////////////////////////////////////////
-	
+
 	public Node parse(String descr) throws ParserException
 	{
 		try {
 			InputStream decrIn = new ByteArrayInputStream(descr.getBytes());
+
+            Debug.message("Parser 121");
 			Node root = parse(decrIn);
 			return root;
 		} catch (Exception e) {

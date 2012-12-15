@@ -206,6 +206,13 @@ public class HTTPServer implements Runnable
 
 	public void performRequestListener(HTTPRequest httpReq)
 	{
+
+        System.out.println("start: performRequestListener stack trace =================");
+        for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
+            System.out.println(ste);
+        }
+        System.out.println("end:   performRequestListener stack trace =================\n\n");
+
 		int listenerSize = httpRequestListenerList.size();
 		for (int n=0; n<listenerSize; n++) {
 			HTTPRequestListener listener = (HTTPRequestListener)httpRequestListenerList.get(n);

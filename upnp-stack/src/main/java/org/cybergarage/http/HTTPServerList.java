@@ -89,6 +89,7 @@ public class HTTPServerList extends Vector
 		int j=0;
 		for (int i = 0; i < bindAddresses.length; i++) {
 			HTTPServer httpServer = new HTTPServer();
+            //关键
 			if((bindAddresses[i]==null) || (httpServer.open(bindAddresses[i], port) == false)) {
 				close();
 				clear();

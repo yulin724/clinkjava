@@ -389,7 +389,9 @@ public class Node
 		String name = getName();
 		String value = getValue();
 
-		if (hasNodes() == false || hasChildNode == false) {		
+//        System.out.println("node name: " + name);
+
+		if (hasNodes() == false || hasChildNode == false) {
 			ps.print(indentString + "<" + name);
 			outputAttributes(ps);
 			// Thnaks for Tho Beisch (11/09/04)
@@ -399,14 +401,14 @@ public class Node
 			} else {
 				ps.println(">" + XML.escapeXMLChars(value) + "</" + name + ">");
 			}
-			
+
 			return;
 		}
-		
+
 		ps.print(indentString + "<" + name);
 		outputAttributes(ps);
 		ps.println(">");
-	
+
 		int nChildNodes = getNNodes();
 		for (int n=0; n<nChildNodes; n++) {
 			Node cnode = getNode(n);
@@ -430,22 +432,22 @@ public class Node
 		}
 		return byteOut.toString();
 	}
-		
+
 	public String toString()
 	{
 		return toString(XML.CHARSET_UTF8, true);
 	}
-	
+
 	public String toXMLString(boolean hasChildNode)
 	{
 		String xmlStr = toString();
-		xmlStr = xmlStr.replaceAll("<", "&lt;");	
-		xmlStr = xmlStr.replaceAll(">", "&gt;");	
-		// Thanks for Theo Beisch (11/09/04)
-		xmlStr = xmlStr.replaceAll("&", "&amp;");	
-		xmlStr = xmlStr.replaceAll("\"", "&quot;");	
-		// Thanks for Brian Owens (12/02/04)
-		xmlStr = xmlStr.replaceAll("'", "&apos;");	
+//		xmlStr = xmlStr.replaceAll("<", "&lt;");
+//		xmlStr = xmlStr.replaceAll(">", "&gt;");
+//		// Thanks for Theo Beisch (11/09/04)
+//		xmlStr = xmlStr.replaceAll("&", "&amp;");
+//		xmlStr = xmlStr.replaceAll("\"", "&quot;");
+//		// Thanks for Brian Owens (12/02/04)
+//		xmlStr = xmlStr.replaceAll("'", "&apos;");
 		return xmlStr;
 	}
 
