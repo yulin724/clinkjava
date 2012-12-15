@@ -1,0 +1,30 @@
+
+
+|
+performActionListener
+|
+deviceActionControlRecieved
+|
+deviceControlRequestRecieved
+|
+soapActionRecieved
+|
+httpPostRequestRecieved
+|
+httpRequestRecieved
+|
+performRequestListener (HTTPServer.java)
+|
+run (HTTPServerThread.java)
+|
+run (HTTPServer.java)
+|
+open (HTTPServerList.java) //create new HTTPServer instance
+|
+start() (Device.java:1904)
+
+
+java.lang.Thread.getStackTrace(Thread.java:1495)
+org.cybergarage.upnp.Device.start(Device.java:1897)
+LightFrame.<init>(LightFrame.java:49)
+LightFrame.main(LightFrame.java:104)
